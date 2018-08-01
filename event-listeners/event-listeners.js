@@ -1,6 +1,7 @@
 // YOUR TASK: Add more pictures!
-var pictures = ['./imgs/dog.jpg'];
+var pictures = ['./imgs/dog.jpg', './imgs/another.jpg', './imgs/einstien.jpeg', './imgs/download.jpeg', './imgs/imag.jpeg', './imgs/images.jpeg'];
 var currentIndex = 0;
+var img = document.getElementsByTagName('img')
 
 function showNextPicture() {
   currentIndex++; // increment current picture
@@ -8,6 +9,6 @@ function showNextPicture() {
   if (currentIndex >= pictures.length) {
     currentIndex = 0;
   }
-
-  // YOUR TASK: Finish this function!
+  img[0].src=pictures[currentIndex]
 }
+document.getElementsByTagName("body")[0].addEventListener("click", function(event){showNextPicture()})
